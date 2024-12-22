@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elys</title>
+</head>
+<style>
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-image: url(pics/26.png);
+    }
+    .container {
+        width: 400px;
+        padding: 40px;
+        box-shadow: 0px 0px 20px rgb(0, 0, 0);
+        border-radius: 30px;
+        text-align: center;
+        background-color: #f3fadb;
+    }
+    .logo {
+        display: block; 
+        margin: 0 auto; 
+        max-width: 200px; 
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        height: 70px;
+        width: 90px;
+    }
+    input {
+        width: 90%;
+        margin: 10px 0;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+    }
+    button {
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 100px;
+        background-color: #e75cd4;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #660861;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="Nonchalant.html"><img class="logo" src="pics/logoelys.png" alt="elys"></a>
+        </div>
+            <h2 align="left">Sign - In</h2>
+            <div id="loginForm" class="login-form">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button id="LogBut" onclick="login()">LOGIN</button>
+                <p id="errorMessage" style="display: none; color: red;"></p>
+                <p id="attemptMessage" style="display: none; color: rgba(0, 0, 0, 0.986);"></p>
+                <br>
+                <p><a href="about.html">Sign Up/Create Account</a></p>
+            </div>
+        </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const maxAttempts = 3;
+                    let attemptCount = 0;
+
+                    function login() {
+                        const usernameInput = document.getElementById('username');
+                        const passwordInput = document.getElementById('password');
+                        const errorMessage = document.getElementById('errorMessage');
+                        const attemptMessage = document.getElementById('attemptMessage');
+
+                        const username = usernameInput.value;
+                        const password = passwordInput.value;
+
+                        if (username === 'user' && password === 'password') {
+                            alert('Login successful!');
+                            window.location.href = 'Nonchalant.html';
+                        } else {
+                            attemptCount++;
+                            errorMessage.style.display = 'block';
+                            errorMessage.textContent = 'Invalid username or password.';
+
+                            if (attemptCount >= maxAttempts) {
+                                usernameInput.disabled = true;
+                                passwordInput.disabled = true;
+                                document.getElementById('LogBut').disabled = true;
+                                attemptMessage.style.display = 'block';
+                                attemptMessage.textContent = 'Maximum login attempts exceeded. Please try again later.';
+                            } else {
+                                attemptMessage.style.display = 'block';
+                                attemptMessage.textContent = 'Attempt ' + attemptCount + ' of ' + maxAttempts;
+                            }
+                        }
+                    }
+
+                    // Attach login function to global scope so the button's onclick works
+                    window.login = login;
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

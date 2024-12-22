@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* ... other styles ... */
+
+header {
+  display: flex;
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center;
+  padding: 10px; /* Add some padding */
+}
+
+.main-nav {
+  flex-grow: 1; /* Allow navigation to take up available space */
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-nav li {
+  margin-right: 20px;
+}
+
+#hamburger-container:hover #loginDropdown,
+#loginDropdown.show {
+  display: block;
+  /* Adjust positioning of the dropdown as needed */
+  right: 0; /* Position it to the right */
+}
+
+/* ... other styles ... */
+
+/*Dropdown styles*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f5c0f7;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #912d8c;
+}
+
+#shop:hover > .dropdown-content {
+  display: block;
+}
+</style>
+<body>
+  <header>
+    <div class="logo"><a href="Nonchalant.html"><img class="logo" src="pics/logoelys.png" alt="elys"></a></div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="Nonchalant.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li id="shop">
+          <a href="#">Shop</a>
+          <div class="dropdown-content" id="shopDropdown">
+            <a href="#">Tumblers</a>
+            <a href="#">Accessories</a>
+            <a href="#">Sale Items</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="hamburger-container">
+      <a href="#" id="bars">&#9776;</a>
+      <div class="dropdown-content" id="loginDropdown">
+        <a href="SignUp.html">Log In</a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>

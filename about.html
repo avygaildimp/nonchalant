@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Elys</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Comfortaa, sans-serif;
+    }
+    header {
+        background: #ec64e6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    header :hover{
+        color: #6d3c8d;
+    }
+
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        height: 70px;
+        width: 90px;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 0 50px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    .image-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:70vh;
+        margin: 0 auto;
+    }
+    header .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f5c0f7;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    header .dropdown a {
+        color: rgb(0, 0, 0);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    header .dropdown a:hover {
+        background-color: #912d8c;
+    }
+    #shop:hover .dropdown {
+        display: block;
+    }
+    footer {
+        color: #000000;
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #ec64e6;        
+    }
+    footer .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; 
+        background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    }
+
+    /* Modal content */
+    footer .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        color: black;
+        font-size: 1em;
+        overflow-y: auto;
+        max-height: 80%;
+    }
+
+    /* Close button styling */
+    footer .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    footer .close:hover,
+    footer .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Accept button styling */
+    footer .accept-btn {
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        background-color: black;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    footer .accept-btn:hover {
+        background-color: #333;
+    }
+
+    /* Styling for Terms and Privacy links */
+    footer .terms-privacy-links {
+        margin-top: 10px;
+    }
+
+    footer .terms-privacy-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    footer .terms-privacy-links a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo"><a href="Nonchalant.html"><img class="logo" src = "pics/logoelys.png" alt = "elys"></a></div>
+        <nav>
+          <ul>
+            <li><a href="Nonchalant.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li id = "shop"><a href="shop.html">Shop</a>
+                <div class="dropdown">
+                    <a href="shop.html">Tumblers</a>
+                </div>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="SignUp.html">Log In</a></li>
+            </ul>
+        </nav>
+      </header>
+    <div>
+        <table align="center" width="100%">
+            <tr align="center">
+                <td>
+                    <img src="pics/11.png" alt="paye" width="1330px">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table align="center" width="100%">
+            <tr align="center">
+                <td>
+                    <h2>Introducing Elys Tumblers:</h2>
+                    <h3>Your new go-to for hydration. The perfect tumbler for your everyday adventures.</h3>
+                </td>
+                <td>
+                    <img src="pics/13.png" alt="tumbler" width="300px">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table align="center" width="100%" bgcolor="sky blue">
+            <tr align="center">
+                <td>
+                    <img src="pics/14.png" alt="tumbler" width="300px">
+                </td>
+                <td>
+                    <h2>Elys Tumblers:</h2>
+                    <h3>Crafted for durability, designed for style.</h3>
+                    <h3>Tumblers that keep your drinks hot or cold for hours.</h3>
+                    <h3>Leakproof, insulated, and built to last.</h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table align="center" width="100%">
+            <tr align="center">
+                <td>
+                    <h2>Ready to upgrade your hydration game?</h2>
+                </td>
+                <td>
+                    <img src="pics/15.png" alt="tumbler" width="450px">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <a href = "Nonchalant.html"><img src = "pics/logoelys.png" alt = "Elys" width="100px"></a>
+        <h4>#StayHydrated #TumblerLove</h4>
+        <div class="terms-privacy-links">
+            <a href="#" id="termsLink">Terms</a> |
+            <a href="#" id="privacyLink">Privacy</a>
+          </div>
+          <div id="termsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeTerms">&times;</span>
+                <h2>Terms & Conditions</h2>
+                <p>Welcome to our website. By accessing and using this website, you accept and agree to be bound by the terms and conditions of this agreement.</p>
+                <ol>
+                    <li><strong>Use of the Website:</strong> You agree to use the website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the website.</li>
+                    <li><strong>Intellectual Property:</strong> The content on this website, including but not limited to text, images, and logos, is owned by us and protected by copyright and trademark laws.</li>
+                    <li><strong>Limitation of Liability:</strong> We shall not be liable for any damages that result from the use of, or the inability to use, the materials on this site, even if we have been advised of the possibility of such damages.</li>
+                    <li><strong>Changes to Terms & Conditions:</strong> We reserve the right to make changes to these terms and conditions at any time. Your continued use of the website will signify your acceptance of any adjustment to these terms.</li>
+                </ol>
+                <p>If you have any questions about our Terms & Conditions, please <a href="mailto:sirkenneththebest">contact us</a>.</p>
+                <button class="accept-btn" id="acceptTerms">Accept</button>
+            </div>
+        </div>
+    
+        <!-- Modal for Privacy Policy -->
+        <div id="privacyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closePrivacy">&times;</span>
+                <h2>Privacy Policy</h2>
+                <p>Your privacy is important to us. Please read our Privacy Policy for information on how we collect, use, and protect your personal data.</p>
+                <ul>
+                    <li><strong>Information Collection:</strong> We collect information from you when you visit our site or fill out a form.</li>
+                    <li><strong>Use of Information:</strong> The information we collect is used to personalize your experience and improve our website.</li>
+                    <li><strong>Data Protection:</strong> We implement a variety of security measures to maintain the safety of your personal information.</li>
+                    <li><strong>Cookies:</strong> We use cookies to enhance user experience. You can control cookie settings through your browser.</li>
+                </ul>
+                <p>If you have any questions about our Privacy Policy, please <a href="mailto:sirkenneththebest">contact us</a>.</p>
+                <button class="accept-btn" id="acceptPrivacy">Accept</button>
+            </div>
+        </div>
+        <br>
+        <script>
+            // Get the modal elements
+            var termsModal = document.getElementById('termsModal');
+            var privacyModal = document.getElementById('privacyModal');
+    
+            // Get the links that open the modals
+            var termsLink = document.getElementById('termsLink');
+            var privacyLink = document.getElementById('privacyLink');
+    
+            // Get the close buttons
+            var closeTerms = document.getElementById('closeTerms');
+            var closePrivacy = document.getElementById('closePrivacy');
+    
+            // Get the accept buttons
+            var acceptTerms = document.getElementById('acceptTerms');
+            var acceptPrivacy = document.
+            getElementById('acceptPrivacy');
+    
+            // When the user clicks on the Terms link, open the Terms modal
+            termsLink.onclick = function() {
+                termsModal.style.display = "block";
+            }
+    
+            // When the user clicks on the Privacy link, open the Privacy modal
+            privacyLink.onclick = function() {
+                privacyModal.style.display = "block";
+            }
+    
+            // When the user clicks on <span> (x), close the modal
+            closeTerms.onclick = function() {
+                termsModal.style.display = "none";
+            }
+    
+            closePrivacy.onclick = function() {
+                privacyModal.style.display = "none";
+            }
+    
+            // When the user clicks on the Accept button, close the modal
+            acceptTerms.onclick = function() {
+                termsModal.style.display = "none";
+            }
+    
+            acceptPrivacy.onclick = function() {
+                privacyModal.style.display = "none";
+            }
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == termsModal) {
+                    termsModal.style.display = "none";
+                }
+                if (event.target == privacyModal) {
+                    privacyModal.style.display = "none";
+                }
+            }
+        </script>
+
+        <a href="https://www.facebook.com/"><img src="pics/fb.png" alt="fb" width="32px"></a> &emsp;
+        <a href="https://www.instagram.com/"><img src="pics/ig.png" alt="ig" width="55px"></a> &emsp;
+        <a href="https://www.tiktok.com/"><img src="pics/tik.png" alt="tiktok" width="43px"></a> &emsp;
+        <a href="https://www.x.com/"><img src="pics/x.png" alt="x" width="61px"></a>
+        <p>All Rights Reserved © 2024 Hydr8</p>
+        <p>Website by: Nonchalant</p>
+    </footer>
+</body>
+</html>
